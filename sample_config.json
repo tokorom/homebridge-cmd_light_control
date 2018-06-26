@@ -11,7 +11,7 @@
 
     "accessories": [
         {
-            "accessory": "CMD",
+            "accessory": "CUSTOM",
 	    "service": "AV",
             "name": "TV",
 	    "description": "Livingroom tv",
@@ -23,7 +23,7 @@
 	    "getAVChannel_cmd":	"/home/pi/getAVChannel.sh 1"
         },
         {
-            "accessory": "CMD",
+            "accessory": "CUSTOM",
 	    "service": "AV",
             "name": "Receiver",
 	    "description": "Living room receiver",
@@ -36,7 +36,7 @@
         },
         {
            
-	    "accessory": "CMD",
+	    "accessory": "CUSTOM",
      	    "service": "Light",
 	    "brightnessHandling": "yes",
             "name": "Esszimmerlicht",	
@@ -47,7 +47,7 @@
         }, 
         {
            
-	    "accessory": "CMD",
+	    "accessory": "CUSTOM",
      	    "service": "Light",
 	    "brightnessHandling": "yes",
             "name": "Kuechenlicht",
@@ -58,7 +58,7 @@
         }, 
         {
            
-	    "accessory": "CMD",
+	    "accessory": "CUSTOM",
      	    "service": "Light",
 	    "brightnessHandling": "yes",
             "name": "Kaminzimmerlicht",
@@ -69,7 +69,7 @@
         },
         {
            
-	    "accessory": "CMD",
+	    "accessory": "CUSTOM",
      	    "service": "Light",
 	    "brightnessHandling": "yes",
             "name": "Wohnzimmerlicht",
@@ -79,37 +79,37 @@
 	    "get_status_cmd": "/home/pi/getlight.sh 28"
         },
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "TemperaturSensor",
 	    "name": "Aussentemperatur",
 	    "get_temperature_cmd": "/home/pi/gettemperature.sh 0"
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "TemperaturSensor",
 	    "name": "Kueche",
 	    "get_temperature_cmd": "/home/pi/gettemperature.sh 6"
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "TemperaturSensor",
 	    "name": "Esszimmer",
 	    "get_temperature_cmd": "/home/pi/gettemperature.sh 8"
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "TemperaturSensor",
 	    "name": "Kaminzimmer",
 	    "get_temperature_cmd": "/home/pi/gettemperature.sh 9"
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "TemperaturSensor",
 	    "name": "Wohnzimmer",
 	    "get_temperature_cmd": "/home/pi/gettemperature.sh 10"
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "Blinds",
 	    "name": "Wohnzimmer Jalousie",
 	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 2",
@@ -120,7 +120,7 @@
 
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "Blinds",
 	    "name": "Kaminzimmer Jalousie",
 	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 3",
@@ -131,7 +131,7 @@
 
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "Blinds",
 	    "name": "Esszimmer Jalousie",
 	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 7",
@@ -142,7 +142,7 @@
 
 	},
 	{
- 	    "accessory": "CMD",	   
+ 	    "accessory": "CUSTOM",	   
      	    "service": "Blinds",
 	    "name": "Kueche Jalousie",
 	    "getBlindsPosition_cmd": "/home/pi/getblindsposition.sh 12",
