@@ -358,6 +358,8 @@ CmdAccessory.prototype = {
     setBrightness: function (level, callback) {
 
         var cmd = this.brightness_cmd.replace("%b", level)
+        this.on_cmd = cmd;
+        this.off_cmd = cmd;
         if (!this.getStatus_cmd) {
             this.log.warn("Ignoring request; No status cmd defined.");
             callback(new Error("No status cmd defined."));
@@ -375,6 +377,22 @@ CmdAccessory.prototype = {
                 this.log('CMD Set brightness function succeeded!');
                 //callback();  
             }
+        }.bind(this));
+
+        this.log("Getting brightness level");
+
+        cmd = this.getStatus_cmd;
+
+        this.cmdRequest(cmd, function (error, response, stderr) {
+            if (error) {
+                this.log('CMD get brightness function failed: %s', error.message);
+                callback(error);
+		return;
+            } else {
+                this.log('Brightness level is currently %s', parseFloat(response));
+                callback(null, parseFloat(response));
+            }
+
         }.bind(this));
     },
 	
