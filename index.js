@@ -55,6 +55,7 @@ function CmdAccessory(log, config) {
 CmdAccessory.prototype = {
 
     cmdRequest: function (cmd, callback) {
+        this.log(cmd);
 
         exec(cmd, function (error, stdout, stderr) {
             callback(error, stdout, stderr)
