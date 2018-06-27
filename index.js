@@ -376,25 +376,6 @@ CmdAccessory.prototype = {
                 //callback();  
             }
         }.bind(this));
-
-
-
-        this.log("Getting brightness level");
-
-
-        cmd = this.getStatus_cmd;
-
-        this.cmdRequest(cmd, function (error, response, stderr) {
-            if (error) {
-                this.log('CMD get brightness function failed: %s', error.message);
-                callback(error);
-		return;
-            } else {
-                this.log('Brightness level is currently %s', parseFloat(response));
-                callback(null, parseFloat(response));
-            }
-
-        }.bind(this));
     },
 	
 	
