@@ -25,7 +25,7 @@ function CmdAccessory(log, config) {
     this.brightnessHandling = config["brightnessHandling"] || "no";
 	this.speedHandling = config["speedHandling"] || "no";
 	this.maxspeedlevel = config["maxspeedlevel"] || 100;
-	this.speedstep = config["speedstep"] || 10;
+	this.speedstep = config["speedstep"] || 1;
     this.getTemperature_cmd = config["get_temperature_cmd"];
     this.getCO2_cmd = config["getCO2_cmd"];
     this.getHumidity_cmd = config["getHumidity_cmd"];
@@ -399,10 +399,6 @@ CmdAccessory.prototype = {
 	
 	setSpeed: function (level, callback) {
 
-        if (level < 20) {
-			//min level for a generic fan to start
-			level = 0;
-        }
         var cmd = this.speed_cmd.replace("%b", level)
         if (!this.getStatus_cmd) {
             this.log.warn("Ignoring request; No status cmd defined.");
