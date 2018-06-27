@@ -358,8 +358,6 @@ CmdAccessory.prototype = {
     setBrightness: function (level, callback) {
 
         var cmd = this.brightness_cmd.replace("%b", level)
-        this.on_cmd = cmd;
-        this.off_cmd = cmd;
         if (!this.getStatus_cmd) {
             this.log.warn("Ignoring request; No status cmd defined.");
             callback(new Error("No status cmd defined."));
